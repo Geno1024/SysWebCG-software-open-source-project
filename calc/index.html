@@ -1,20 +1,24 @@
-<!DOCTYPE>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 <head>
 	<title>Calculator</title>
-	<script type="text/javascript" src="loadxmldoc.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="author" content="Y. Z. Chen"/>
+	<meta name="Copyright" content="Copyright"/>
+	<link rel="stylesheet" type="text/css" href="res/">
+	<script type="text/javascript" src="../libs/loadxmldoc.js"></script>
+	<script type="text/javascript" src="../libs/jQuery.mobile-1.4.2.js"></script>
 	<script type="text/javascript">
-
-		xmlDoc=loadXMLDoc("langzhcn.xml");
-
-		var x = xmlDoc.getElementsByTagName('values');
-		function init () {
-			title=x[0].childNodes[0].nodeValue;
+		xmlDoc=loadXMLDoc("res/langzhcn.xml");
+		var v = xmlDoc.getElementsByTagName('values');
+		function init () 
+		{
+			title=v[0].childNodes[0].nodeValue;
 			document.getElementById('show').innerHTML=title;
 		}
 	</script>
 </head>
 <body onload="init()">
-	<div id='show'></div>
+	<h1 id='show'></h1>
 </body>
 </html>
