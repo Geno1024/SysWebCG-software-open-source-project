@@ -1,0 +1,20 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Calculator</title>
+	<script type="text/javascript" src="loadxmldoc.js"></script>
+	<script type="text/javascript">
+
+		xmlDoc=loadXMLDoc("langzhcn.xml");
+
+		var x = xmlDoc.getElementsByTagName('values');
+		function init () {
+			title=x[0].childNodes[0].nodeValue;
+			document.getElementById('show').innerHTML=title;
+		}
+	</script>
+</head>
+<body onload="init()">
+	<div id='show'></div>
+</body>
+</html>
