@@ -5,13 +5,13 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<meta name="author" content="Y. Z. Chen"/>
 	<meta name="Copyright" content="Copyright"/>
-	<link rel="stylesheet" type="text/css" href="res/">
-	<script type="text/javascript" src="../libs/loadxmldoc.js"></script>
-	<script type="text/javascript" src="../libs/jQuery.mobile-1.4.2.js"></script>
+	<link rel="stylesheet" type="text/css" href="../libs/css/MAIN.css">
+	<script type="text/javascript" src="../libs/js/loadxmldoc.js"></script>
+	<script type="text/javascript" src="../libs/js/jQuery.mobile-1.4.2.js"></script>
 	<script type="text/javascript">
 		xmlDoc=loadXMLDoc("res/langzhcn.xml");
 		var v = xmlDoc.getElementsByTagName('values');
-		function init () 
+		function init ()
 		{
 			title=v[0].childNodes[0].nodeValue;
 			document.getElementById('show').innerHTML=title;
@@ -20,5 +20,21 @@
 </head>
 <body onload="init()">
 	<h1 id='show'></h1>
+	<textarea disabled="disabled" ></textarea>
+	<table border="0">
+		<tr>
+			<td>7</td>
+			<td>8</td>
+			<td>9</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>5</td>
+			<td>6</td>
+		</tr>
+		<tr>
+			
+		</tr>
+	</table>
 </body>
 </html>
