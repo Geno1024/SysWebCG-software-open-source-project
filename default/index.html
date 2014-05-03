@@ -1,10 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 <head>
-	<title>Calculator</title>
+	<title>Default</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	<meta name="author" content="Y. Z. Chen"/>
-	<meta name="Copyright" content="Copyright"/>
 	<link rel="stylesheet" type="text/css" href="../libs/css/style.css">
 	<script type="text/javascript" src="../libs/js/loadxmldoc.js"></script>
 	<script type="text/javascript" src="../libs/js/jQuery.mobile-1.4.2.js"></script>
@@ -14,12 +12,14 @@
 		function init ()
 		{
 			title=v[0].childNodes[0].nodeValue;
-			document.getElementById('show').innerHTML=title;
+			hello=v[0].childNodes[1].nodeValue;
+			document.getElementById('title').innerHTML=title;
+			document.getElementById('hello').innerHTML=hello;
 		}
 	</script>
 </head>
 <body onload="init()">
-	<h1 id='show'></h1>
-	<textarea disabled="disabled" ></textarea>
+	<h1 id='title'></h1>
+	<div id='hello'></div>
 </body>
 </html>
