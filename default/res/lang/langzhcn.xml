@@ -2,5 +2,6 @@
 <resources>
 	<languages>
 		<values id="0">Default</values>
+		<values id="1">Hello</values>
 	</languages>
 </resources>
