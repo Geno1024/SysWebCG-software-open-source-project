@@ -4,7 +4,7 @@
 	<title>Default</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<link rel="stylesheet" type="text/css" href="../libs/css/style.css">
-	<script type="text/javascript" src="../libs/js/loadxmldoc.js"></script>
+	<script type="text/javascript" src="../libs/js/loadxmldocx.js"></script>
 	<script type="text/javascript" src="../libs/js/jQuery.mobile-1.4.2.js"></script>
 	<script type="text/javascript">
 		xmlDoc=loadXMLDoc("res/lang/langzhcn.xml");
@@ -12,8 +12,8 @@
 		function init ()
 		{
 			title=v[0].childNodes[0].nodeValue;
-			hello=v[0].childNodes[1].nodeValue;
 			document.getElementById('title').innerHTML=title;
+			hello=v[1].childNodes[0].nodeValue;
 			document.getElementById('hello').innerHTML=hello;
 		}
 	</script>

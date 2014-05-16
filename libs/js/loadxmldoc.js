@@ -1,23 +1,25 @@
-function loadXMLDoc(dname) 
+function loadXMLDoc(url) 
 {
-try //Internet Explorer
-  {
-  xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
-  }
-catch(e)
-  {
-  try //Firefox, Mozilla, Opera, etc.
-    {
-    xmlDoc=document.implementation.createDocument("","",null);
-    }
-  catch(e) {alert(e.message)}
-  }
-try 
-  {
-  xmlDoc.async=false;
-  xmlDoc.load(dname);
-  return(xmlDoc);
-  }
-catch(e) {alert(e.message)}
-return(null);
+	var xmlDoc;
+	try
+	{
+		xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+	}
+	catch(e)
+	{
+		try
+		{
+			var oXmlHttp = new XMLHttpRequest() ;
+			oXmlHttp.open( "GET", url, false ) ;
+			oXmlHttp.send(null) ; 
+			return oXmlHttp.responseXML;
+		}
+		catch(e)
+		{
+			return;
+		}
+	}
+	xmlDoc.async=false;
+	xmlDoc.load(url);
+	return xmlDoc;
 }
