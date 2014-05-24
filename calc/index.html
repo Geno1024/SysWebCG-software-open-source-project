@@ -11,15 +11,16 @@
 	<script type="text/javascript">
 		xmlDoc=loadXMLDoc("res/lang/langzhcn.xml");
 		var v = xmlDoc.getElementsByTagName('values');
+		var showtitle = document.getElementById('show');
 		function init ()
 		{
 			title=v[0].childNodes[0].nodeValue;
-			document.getElementById('show').innerHTML=title;
+			showtitle.innerHTML=title;
 		}
 	</script>
 </head>
 <body onload="init()">
-	<h1 id='show'></h1>
+	<h1 id='showtitle'></h1>
 	<textarea disabled="disabled" ></textarea>
 	<table border="0">
 		<tr>
